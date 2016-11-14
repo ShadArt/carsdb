@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cars.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,10 @@ namespace Cars.UI
     {
         static void Main(string[] args)
         {
-          
+            using (var c = new Context())
+            {
+                var temp = c.Manufacturers.ToList();
+            }
         }
     }
 }
